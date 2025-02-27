@@ -1,0 +1,833 @@
+EXE 1
+
+import java.util.Scanner; 
+
+public class Exe1{
+   public static void main(String[] args) {
+
+      Scanner sc = new Scanner(System.in);
+
+     
+      System.out.print("Idade: ");
+      int idade = sc.nextInt();
+
+      System.out.print("Meses: ");
+      int meses = sc.nextInt();
+
+      System.out.print("Dias: ");
+      int dias = sc.nextInt();
+      
+      int total, cont, tudo;
+      
+      cont = idade * 365;
+      total = meses * 30;
+      
+      tudo = cont + total + dias;
+      
+      System.out.println("TOTAL DE DIAS: " + tudo);
+      
+     
+   }
+}
+
+Teste de mesa exercicio 1:
+
+*ENTRADA*
+Idade: 21
+Meses: 10
+Dias: 27
+
+*SAIDA*
+TOTAL DE DIAS: 7992
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+EXE 2
+
+import java.util.Scanner; 
+
+public class Exe2 {
+   public static void main(String[] args) {
+
+      Scanner sc = new Scanner(System.in);
+
+     System.out.print("Digite o numero de eleitores: ");
+     int eleitores = sc.nextInt();
+     
+     System.out.print("Votos Brancos: ");
+     int brancos = sc.nextInt();
+     System.out.print("Votos Nulos: ");
+     int nulos = sc.nextInt();
+     System.out.print("Votos Validos: ");
+     int validos = sc.nextInt();
+     
+     int total;
+     double pb, pn, pv;
+     
+     total =  brancos + nulos + validos;
+     
+     pb = ((double)brancos / eleitores) * 100;
+     pn = ((double)nulos / eleitores) * 100;
+     pv = ((double)validos / eleitores) * 100;
+   
+     System.out.println("Total de votos: " + total);
+     
+     System.out.println("Porcentagem de brancos: " + pb);
+     
+     System.out.println("Porcentagem de nulos: " + pn);
+     
+     System.out.println("Porcentagem de validos: " + pv);
+     
+
+   }
+}
+
+Teste de mesa exercicio 2:
+
+*ENTRADA*
+Eleitores: 1000
+Votos Brancos: 200
+Votos Nulos: 100
+Votos Validos: 700
+
+*SAIDA*
+Total de votos: 1000
+Porcentagem de brancos: 20.0
+Porcentagem de nulos: 10.0
+Porcentagem de validos: 70.0
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+EXE 3
+
+import java.util.Scanner; 
+
+public class Exe3 {
+   public static void main(String[] args) {
+
+      Scanner sc = new Scanner(System.in);
+
+    System.out.print("Digite o salario do funcionario: ");
+    double salario = sc.nextDouble();
+    
+    System.out.print("Digite a porcentagem do reajuste: ");
+    double reajuste = sc.nextDouble();
+    
+    double novoSalario, total;
+    
+    total = (salario / 100) * reajuste;
+    novoSalario = salario + total;
+    
+    System.out.println("Aumento salarial: " + total);
+    System.out.println("Novo salario: " + novoSalario);
+       
+   }
+}
+
+Teste de mesa exercicio 3:
+
+*ENTRADA*
+salario do funcionario: 2000.50
+porcentagem do reajuste: 10
+
+*SAIDA*
+Aumento salarial: 200.05
+Novo salario: 2200.55
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+EXE 4
+
+import java.util.Scanner; 
+
+public class Exe4{
+   public static void main(String[] args) {
+
+      Scanner sc = new Scanner(System.in);
+
+    System.out.print("Digite o custo de fabrica: ");
+    double custo = sc.nextDouble();
+    
+    System.out.print("Digite a porcentagem do distribuidor: ");
+    int distribuidor = sc.nextInt();
+    
+    System.out.print("Digite a porcentagem dos impostos: ");
+    int imposto = sc.nextInt();
+    
+    double totalI, totalD, total;
+    
+    totalI = ((double)imposto + custo) / 100;
+    totalD = ((double)distribuidor + custo) / 100;
+    
+    total =  totalD + totalI + custo;
+    
+    System.out.println("Custo final: " + total);
+    
+    
+
+   }
+}
+
+Teste de mesa exercicio 4:
+
+*ENTRADA*
+custo de fabrica: 20000
+porcentagem do distribuidor: 28
+porcentagem dos impostos: 45
+
+*SAIDA*
+Custo final: 20400.73
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+EXE 5
+
+import java.util.Scanner; 
+
+public class Exe5 {
+   public static void main(String[] args) {
+
+      Scanner sc = new Scanner(System.in);
+
+    System.out.print("Salario fixo do funcionario: ");
+    double salario = sc.nextDouble();
+    
+    System.out.print("Valor de comissão fixa: ");
+    double comissao = sc.nextDouble();
+
+    System.out.print("Numeros de carros vendidos: ");
+    int carrosV = sc.nextInt();
+    
+     System.out.print("Valor total de suas vendas: ");
+    double valor = sc.nextDouble();
+    
+    double comissaoF, valorT, salarioF;
+    
+    valorT = (valor / 100) * 5;
+    
+    comissaoF = comissao * carrosV;
+    
+    
+    
+    
+    salarioF = salario + comissaoF  + valorT;
+    
+    System.out.println("SALARIO FINAL: " + salarioF);
+    
+
+   }
+}
+
+Teste de mesa exercicio 5:
+
+*ENTRADA*
+Salario fixo do funcionario: 1500,50
+Valor de comissão fixa: 150,00
+Carros vendidos: 10
+Valor total de suas vendas: 100000,00
+
+*SAIDA*
+SALARIO FINAL: 8000.5
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+EXE 6
+
+import java.util.Scanner; 
+
+public class Exe6{
+    public static void main(String[] args) {
+
+      Scanner sc = new Scanner(System.in);
+
+    System.out.print("Escreva em Graus: ");
+    double graus = sc.nextDouble();
+    
+    double fire;
+    
+    fire = (1.8 * graus) + 32;
+    
+    System.out.print("Em Fahrenheit: " + fire);
+  
+   }
+}
+
+Teste de mesa exercicio 6:
+
+*ENTRADA*
+Graus: 100
+
+*SAIDA*
+Fahrenheit: 212
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+EXE 7
+
+import java.util.Scanner; 
+
+public class Exe7{
+    public static void main(String[] args) {
+
+      Scanner sc = new Scanner(System.in);
+
+    System.out.print("Escreva um numero: ");
+    int num = sc.nextInt();
+    
+    if (num > 10){
+    System.out.println("MAIOR QUE 10"); 
+    } else if (num == 10) {
+    System.out.println("IGUAL A 10");    
+    }
+    else {
+    System.out.println("MENOR QUE 10");    
+    }
+
+   }
+}
+
+Teste de mesa exercicio 7:
+
+Teste 1: 
+
+*ENTRADA*
+numero: 10
+
+*SAIDA*
+IGUAL A 10
+
+Teste 2:
+
+*ENTRADA*
+numero: 15
+
+*SAIDA*
+MAIOR QUE 10
+
+Teste 3:
+
+*ENTRADA*
+numero: 5
+
+*SAIDA*
+MENOR QUE 10
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+EXE 8
+
+import java.util.Scanner; 
+
+public class Exe8{
+    public static void main(String[] args) {
+
+      Scanner sc = new Scanner(System.in);
+
+    System.out.print("Escreva um numero: ");
+    int num = sc.nextInt();
+    
+    if (num >= 0){
+    System.out.println("POSITIVO"); 
+    } else {
+     System.out.println("NEGATIVO");     
+    }
+
+   }
+}
+
+Teste de mesa exercicio 8:
+
+Teste 1:
+
+*ENTRADA*
+numero: 4
+
+*SAIDA*
+POSITIVO
+
+Teste 2:
+*ENTRADA*
+numero: -2
+
+*SAIDA*
+NEGATIVO
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+EXE 9
+
+import java.util.Scanner; 
+
+public class Exe9{
+    public static void main(String[] args) {
+
+      Scanner sc = new Scanner(System.in);
+
+double maca = 1.30;
+
+
+    System.out.print("Digite a quantidade de maca: ");
+    int x = sc.nextInt();
+    
+    if (x > 12){
+    maca = 1.00;
+    maca = x * maca; 
+    } else {
+    maca = x * maca;     
+    }
+    
+    System.out.print("Total da compra: " + maca);
+
+   }
+}
+
+Teste de mesa exercicio 9:
+
+Teste 1:
+
+*ENTRADA*
+quantidade de maca: 10
+
+*SAIDA*
+Total da compra: 13.0
+
+
+Teste 2:
+
+*ENTRADA*
+quantidade de maca: 15
+
+*SAIDA*
+Total da compra: 15.0
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+EXE 10
+
+import java.util.Scanner;
+
+public class Exe10{
+
+     public static void main(String []args){
+         Scanner sc = new Scanner(System.in);
+         
+         double media = 0;
+        System.out.println("Digite duas notas: ");
+        
+        double x = sc.nextDouble();
+        double y = sc.nextDouble();
+        
+        media = (x + y) / 2;
+        
+        System.out.println("Media do aluno: " + media);
+        
+        if (media >= 6.0){
+          System.out.println("APROVADO!");  
+       }
+       else{
+           System.out.println("REPROVADO!");  
+       } 
+   }
+}
+
+Teste de mesa exercicio 10:
+
+Teste 1:
+
+*ENTRADA*
+notas: 10
+5
+
+*SAIDA*
+Media do aluno: 7.5
+APROVADO!
+
+Teste 2:
+
+*ENTRADA*
+notas: 5
+5
+
+*SAIDA*
+Media do aluno: 5.0
+REPROVADO!
+   
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+EXE 11 
+ 
+import java.util.Scanner;
+
+public class Exe11{
+
+     public static void main(String []args){
+        
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o ano atual:");
+        int ano = scanner.nextInt();
+        
+        System.out.print("Digite o ano de nascimento:");
+        int nas = scanner.nextInt();        
+        
+        int voto = ano-nas;
+        
+        if (voto >= 16) {
+        System.out.println("Liberado para votar");
+        } else{
+        System.out.println("Nao podera votar");     
+        }
+     }
+}
+
+Teste de mesa exercicio 11:
+
+Teste 1:
+
+*ENTRADA*
+Digite o ano atual:2025
+Digite o ano de nascimento:2014
+
+*SAIDA*
+Nao podera votar
+
+Teste 2:
+
+*ENTRADA*
+Digite o ano atual:2025
+Digite o ano de nascimento:2007
+
+*SAIDA*
+Liberado para votar
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   
+EXE 12
+
+import java.util.Scanner;
+
+public class Exe12 {
+
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+
+        
+        System.out.print("Digite um numero: ");
+        int x = scanner.nextInt();  
+        
+        System.out.print("Digite outro numero: ");
+        int y = scanner.nextInt(); 
+        
+        
+        while (x == y) {
+            System.out.println("Os numeros nao podem ser iguais.");
+            
+            System.out.print("Digite um numero: ");
+            x = scanner.nextInt();  
+            
+            System.out.print("Digite outro numero: ");
+            y = scanner.nextInt(); 
+        }
+        
+        if (x > y){
+            System.out.println("X maior: " + x);
+        } else {
+            System.out.println("Y maior: " + y); 
+        }
+        
+     
+    }
+}
+
+Teste de mesa exercicio 12:
+
+Teste 1:
+
+*ENTRADA*
+numero: 10
+outro numero: 5
+
+*SAIDA*
+X maior: 10
+
+Teste 2:
+
+*ENTRADA*
+numero: 15
+outro numero: 20
+
+*SAIDA*
+Y maior: 20
+
+Teste 3:
+
+*ENTRADA*
+numero: 30
+outro numero: 30
+
+*SAIDA*
+Os numeros nao podem ser iguais.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+EXE 13
+
+import java.util.Scanner;
+
+public class Exe13 {
+
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+
+        
+        System.out.print("Digite um numero: ");
+        int x = scanner.nextInt();  
+        
+        System.out.print("Digite outro numero: ");
+        int y = scanner.nextInt(); 
+        
+        
+        while (x == y) {
+            System.out.println("Os numeros nao podem ser iguais.");
+            
+            System.out.print("Digite um numero: ");
+            x = scanner.nextInt();  
+            
+            System.out.print("Digite outro numero: ");
+            y = scanner.nextInt(); 
+        }
+        
+  
+        
+        if (x > y){
+            System.out.println("DECRESCENTE");
+        } else {
+            System.out.println("CRESCENTE"); 
+        }
+        
+     
+    }
+}
+
+Teste de mesa exercicio 13:
+
+Teste 1:
+
+*ENTRADA*
+numero: 10
+outro numero: 50
+
+*SAIDA*
+CRESCENTE
+
+Teste 2:
+
+*ENTRADA*
+numero: 20
+outro numero: 10
+
+*SAIDA*
+DECRESCENTE
+
+Teste 3:
+
+*ENTRADA*
+numero: 20
+outro numero: 20
+
+*SAIDA*
+Os numeros nao podem ser iguais.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+EXE 14
+
+import java.util.Scanner;
+
+public class Exe14 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+
+        System.out.print("Digite a hora de inicio do jogo: ");
+        int horaInicio = scanner.nextInt();
+        
+        System.out.print("Digite a hora de fim do jogo: ");
+        int horaFim = scanner.nextInt();
+        
+        int duracao;
+        
+        if (horaFim >= horaInicio) {
+            duracao = horaFim - horaInicio;
+        } else {
+            duracao = (24 - horaInicio) + horaFim;
+        }
+        
+        System.out.println("A duraçao do jogo foi de " + duracao + " horas.");
+        
+    }
+}
+
+Teste de mesa exercicio 14:
+
+*ENTRADA*
+inicio do jogo: 20
+fim do jogo: 19
+
+*SAIDA*
+A duraçao do jogo foi de 23 horas.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+EXE 15
+
+import java.util.Scanner;
+
+public class Exe15 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+       
+        System.out.print("Digite as horas trabalhadas na semana: ");
+        int horasT = scanner.nextInt();
+
+        System.out.print("Digite o salario por hora: ");
+        double salarioHora = scanner.nextDouble();
+
+       
+        int horasNormais = 40 * 4;
+        double salarioTotal;
+
+        if (horasT <= horasNormais) {
+           
+            salarioTotal = horasT * salarioHora;
+        } else {
+            
+            int horasExtras = horasT - horasNormais;
+            double valorHoraExtra = salarioHora * 1.5;
+            salarioTotal = (horasNormais * salarioHora) + (horasExtras * valorHoraExtra);
+        }
+
+       
+        System.out.printf("O salario total do funcionario: R$ %.2f%n", salarioTotal);
+        
+    
+    }
+} 
+
+Teste de mesa exercicio 15:
+
+*ENTRADA*
+horas trabalhadas na semana: 45
+salario por hora: 50,00
+
+*SAIDA*
+O salario total do funcionario: R$ 2250,00
+ 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+EXE 16
+
+import java.util.Scanner;
+
+public class Exe16 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Digite o primeiro mes (gastos): ");
+		double primeiro = sc.nextDouble();
+		
+		System.out.print("Digite o segundo mes (gastos): ");
+		double segundo = sc.nextDouble();
+		
+		System.out.print("Digite o terceiro mes (gastos): ");
+		double terceiro = sc.nextDouble();
+		
+		double total, media;
+		
+		total = primeiro + segundo + terceiro;
+		
+		System.out.println("Dispensa total da empresa: " + total);
+		
+		media = total / 3;
+		
+		System.out.println("Media mensal de gastos: " + String.format ("%.2f",  media));
+		
+	
+	}
+
+}
+
+Teste de mesa exercicio 16:
+
+*ENTRADA*
+primeiro mes: 15000
+segundo mes: 23000
+terceiro mes: 17000
+
+*SAIDA*
+Dispensa total da empresa: 55000.0
+Media mensal de gastos: 18333,33
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+EXE 17
+
+import java.util.Scanner;
+
+public class Exe18 {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+
+        System.out.print("Digite a nota P1: ");
+        double P1 = scanner.nextDouble();
+
+        System.out.print("Digite a nota E1: ");
+        double E1 = scanner.nextDouble();
+
+        System.out.print("Digite a nota E2: ");
+        double E2 = scanner.nextDouble();
+
+        System.out.print("Digite a nota API: ");
+        double API = scanner.nextDouble();
+
+        System.out.print("Digite a nota X: ");
+        double X = scanner.nextDouble();
+
+        System.out.print("Digite a nota SUB (ou rec): ");
+        double SUB = scanner.nextDouble();
+
+        double primeiroTermo = (P1 * 0.6) + (((E1 + E2) / 2) * 0.4);
+        primeiroTermo = primeiroTermo * 0.5;
+
+        double segundoTermo = Math.max((primeiroTermo - 5.9), 0);
+        segundoTermo = segundoTermo / (primeiroTermo - 5.9);
+
+        double resultado = primeiroTermo + (segundoTermo * (API * 0.5)) + X + (SUB * 0.3);
+        
+        System.out.println("A media de LP1 do aluno e: " + resultado);
+
+      
+    }
+}
+
+Teste de mesa exercicio 17:
+
+*ENTRADA*
+P1: 8
+E1: 4
+E2: 5
+API: 6
+X: 2
+SUB: 7
+
+*SAIDA*
+A media de LP1 do aluno e: 7.4
+
