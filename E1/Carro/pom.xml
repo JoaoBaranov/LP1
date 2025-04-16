@@ -1,0 +1,20 @@
+<dependencies>
+    <!-- Dependência para JavaFX -->
+    <dependency>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-controls</artifactId>
+        <version>17</version> <!-- Use a versão mais recente -->
+    </dependency>
+</dependencies>
+
+<build>
+<plugins>
+    <plugin>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-maven-plugin</artifactId>
+        <version>0.0.8</version> <!-- A versão mais recente do plugin -->
+        <configuration>
+            <mainClass>com.exemplo.CadastroCarro</mainClass> <!-- Sua classe principal -->
+        </configuration>
+    </plugin>
+</
