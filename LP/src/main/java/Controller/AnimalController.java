@@ -1,45 +1,46 @@
 package Controller;
-import javafx.fxml.FXML;
+
+import Models.Animal;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AnimalController {
 
+    private List<Animal> animais = new ArrayList<>();
 
-    public Animal(String nome, String especie, int idade, String porte) {
-        this.nome = nome;
-        this.especie = especie;
-        this.idade = idade;
-        this.porte = porte;
+    // Adiciona um novo animal (subclasse de Animal)
+    public void adicionarAnimal(Animal animal) {
+        animais.add(animal);
     }
 
-    public String mostrarDados() {
-        return "Nome: " + nome +
-                "\nEspécie: " + especie +
-                "\nIdade: " + idade + " anos" +
-                "\nPorte: " + porte;
+    // Lista todos os animais
+    public List<Animal> listarAnimais() {
+        return animais;
     }
 
-    public String classificarIdade() {
-        if (idade <= 1) {
-            return nome + " é um filhote.";
-        } else if (idade <= 7) {
-            return nome + " é um animal adulto.";
-        } else {
-            return nome + " é um animal idoso.";
+    // Busca um animal pelo nome
+    public Animal buscarAnimalPorNome(String nome) {
+        for (Animal animal : animais) {
+            if (animal.getNome().equalsIgnoreCase(nome)) {
+                return animal;
+            }
         }
+        return null;
     }
 
-    public String emitirSom() {
-        switch (especie.toLowerCase()) {
-            case "cachorro":
-                return nome + " diz: Au Au!";
-            case "gato":
-                return nome + " diz: Miau!";
-            case "pássaro":
-                return nome + " diz: Piu piu!";
-            case "vaca":
-                return nome + " diz: Muuuu!";
-            default:
-                return nome + " emite um som desconhecido.";
+    // Atualiza os dados de um animal existente
+    public boolean atualizarAnimal(String nome, Animal novoAnimal) {
+        for (int i = 0; i < animais.size(); i++) {
+            if (animais.get(i).getNome().equalsIgnoreCase(nome)) {
+                animais.set(i, novoAnimal);
+                return true;
+            }
         }
+        return false;
+    }
+
+    // Remove um animal pelo nome
+    public boolean removerAnimal(String nome) {
+        return animais.removeIf(animal -> animal.getNome().equalsIgnoreCase(nome));
     }
 }
