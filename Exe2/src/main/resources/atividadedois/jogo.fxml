@@ -5,6 +5,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -16,7 +17,10 @@
                 <Font size="30.0" />
             </font>
         </Label>
-        <ImageView fitHeight="168.0" fitWidth="200.0" layoutX="60.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fitHeight="168.0" fitWidth="200.0" layoutX="60.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../IMG/Jogos.jpg" />
+         </image></ImageView>
         <TextField layoutX="353.0" layoutY="113.0" prefHeight="25.0" prefWidth="200.0" />
         <TextField layoutX="353.0" layoutY="163.0" prefHeight="25.0" prefWidth="200.0" />
         <TextField layoutX="353.0" layoutY="210.0" prefHeight="25.0" prefWidth="200.0" />

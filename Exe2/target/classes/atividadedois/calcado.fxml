@@ -5,6 +5,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -16,17 +17,20 @@
                 <Font size="30.0" />
             </font>
         </Label>
-        <ImageView fitHeight="168.0" fitWidth="200.0" layoutX="60.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true" />
-        <TextField layoutX="353.0" layoutY="113.0" prefHeight="25.0" prefWidth="200.0" />
-        <TextField layoutX="353.0" layoutY="163.0" prefHeight="25.0" prefWidth="200.0" />
-        <TextField layoutX="353.0" layoutY="210.0" prefHeight="25.0" prefWidth="200.0" />
+        <ImageView fitHeight="168.0" fitWidth="200.0" layoutX="60.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../IMG/Calçados.jpg" />
+         </image></ImageView>
+        <TextField fx:id="marcaTextField" layoutX="353.0" layoutY="113.0" prefHeight="25.0" prefWidth="200.0" />
+        <TextField fx:id="modeloTextField" layoutX="353.0" layoutY="163.0" prefHeight="25.0" prefWidth="200.0" />
+        <TextField fx:id="tamanhoTextField" layoutX="353.0" layoutY="210.0" prefHeight="25.0" prefWidth="200.0" />
         <Label layoutX="308.0" layoutY="117.0" text="Marca" />
         <Label layoutX="308.0" layoutY="167.0" text="Modelo" />
         <Label layoutX="300.0" layoutY="214.0" text="Tamanho" />
         <Button layoutX="302.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Adicionar" />
-        <Button layoutX="62.0" layoutY="306.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" text="Botar" />
-        <Button layoutX="135.0" layoutY="306.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="Testar" />
-        <Button layoutX="202.0" layoutY="306.0" mnemonicParsing="false" text="Espelho" />
+        <Button fx:id="botaoBotar" layoutX="62.0" layoutY="306.0" mnemonicParsing="false" onAction="#botarOn" prefHeight="25.0" prefWidth="58.0" text="Botar" />
+        <Button fx:id="botaoTestar" layoutX="135.0" layoutY="306.0" mnemonicParsing="false" onAction="#testarOn" prefHeight="25.0" prefWidth="50.0" text="Testar" />
+        <Button fx:id="botaoEspelho" layoutX="202.0" layoutY="306.0" mnemonicParsing="false" onAction="#espelhoOn" text="Espelho" />
         <Button layoutX="410.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Editar" />
         <Button layoutX="516.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Excluir" />
         <TableView layoutX="62.0" layoutY="349.0" prefHeight="200.0" prefWidth="481.0">
