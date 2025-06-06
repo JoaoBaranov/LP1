@@ -5,7 +5,6 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -17,20 +16,17 @@
                 <Font size="30.0" />
             </font>
         </Label>
-        <ImageView fitHeight="168.0" fitWidth="200.0" layoutX="60.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../IMG/Cervejas.jpg" />
-         </image></ImageView>
-        <TextField fx:id="origemTextField" layoutX="353.0" layoutY="113.0" prefHeight="25.0" prefWidth="200.0" />
-        <TextField fx:id="marcaTextField" layoutX="353.0" layoutY="163.0" prefHeight="25.0" prefWidth="200.0" />
-        <TextField fx:id="teorTextField" layoutX="353.0" layoutY="210.0" prefHeight="25.0" prefWidth="200.0" />
+        <ImageView fitHeight="168.0" fitWidth="200.0" layoutX="60.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true" />
+        <TextField layoutX="353.0" layoutY="113.0" prefHeight="25.0" prefWidth="200.0" />
+        <TextField layoutX="353.0" layoutY="163.0" prefHeight="25.0" prefWidth="200.0" />
+        <TextField layoutX="353.0" layoutY="210.0" prefHeight="25.0" prefWidth="200.0" />
         <Label layoutX="308.0" layoutY="117.0" text="Origem" />
         <Label layoutX="308.0" layoutY="167.0" text="Marca" />
         <Label layoutX="310.0" layoutY="210.0" text="Teor" />
         <Button layoutX="302.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Adicionar" />
-        <Button fx:id="botaoBeber" layoutX="60.0" layoutY="306.0" mnemonicParsing="false" onAction="#beberOn" text="Beber" />
-        <Button fx:id="botaoJogar" layoutX="114.0" layoutY="306.0" mnemonicParsing="false" onAction="#jogarOn" prefHeight="25.0" prefWidth="76.0" text="Jogar Fora" />
-        <Button fx:id="botaoGuti" layoutX="196.0" layoutY="306.0" mnemonicParsing="false" onAction="#gutiOn" text="Guti Guti" />
+        <Button layoutX="60.0" layoutY="306.0" mnemonicParsing="false" text="Beber" />
+        <Button layoutX="114.0" layoutY="306.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="Jogar Fora" />
+        <Button layoutX="196.0" layoutY="306.0" mnemonicParsing="false" text="Guti Guti" />
         <Button layoutX="410.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Editar" />
         <Button layoutX="516.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Excluir" />
         <TableView layoutX="62.0" layoutY="349.0" prefHeight="200.0" prefWidth="481.0">
