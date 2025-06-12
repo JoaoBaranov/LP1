@@ -1,0 +1,18 @@
+drop database if exists atividadedois;
+create database if not exists atividadedois;
+
+use atividadedois;
+
+create table atividadedois.animal (
+id int primary key auto_increment not null,
+nome varchar(255) not null,
+especie varchar(255) not null,
+idade int not null
+);
+
+create table atividadedois.calcado (
+id int primary key auto_increment not null,
+marca varchar(255) not null,
+modelo varchar(255) not null,
+tamanho int not null
+)
