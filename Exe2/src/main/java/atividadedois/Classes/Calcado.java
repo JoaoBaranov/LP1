@@ -5,13 +5,15 @@ public class Calcado {
     private String marca;
     private String modelo;
     private int tamanho;
+    private int id;
 
 
 
-    public Calcado(String marca, int tamanho, String modelo) {
+    public Calcado() {
         this.marca = marca;
         this.tamanho = tamanho;
         this.modelo = modelo;
+        this.id = id;
 
     }
 
@@ -27,8 +29,16 @@ public class Calcado {
         return tamanho;
     }
 
-    public void setTamanho(int idade) {
+    public void setTamanho(int tamanho) {
         this.tamanho = tamanho;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getModelo() {return modelo;}

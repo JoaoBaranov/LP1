@@ -5,6 +5,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -16,24 +17,29 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <ImageView fitHeight="168.0" fitWidth="200.0" layoutX="60.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true" />
-      <TextField layoutX="353.0" layoutY="113.0" prefHeight="25.0" prefWidth="200.0" />
-      <TextField layoutX="353.0" layoutY="163.0" prefHeight="25.0" prefWidth="200.0" />
-      <TextField layoutX="353.0" layoutY="210.0" prefHeight="25.0" prefWidth="200.0" />
+      <ImageView fitHeight="168.0" fitWidth="200.0" layoutX="60.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../IMG/Animais.png" />
+         </image></ImageView>
+
+
+      <TextField fx:id="nomeTextField" layoutX="353.0" layoutY="113.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField fx:id="especieTextField" layoutX="353.0" layoutY="163.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField fx:id="idadeTextField" layoutX="353.0" layoutY="210.0" prefHeight="25.0" prefWidth="200.0" />
       <Label layoutX="308.0" layoutY="117.0" text="Nome" />
       <Label layoutX="308.0" layoutY="167.0" text="Especie" />
       <Label layoutX="308.0" layoutY="214.0" text="Idade" />
-      <Button layoutX="302.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Adicionar" />
-      <Button layoutX="60.0" layoutY="306.0" mnemonicParsing="false" text="Carinho" />
-      <Button layoutX="127.0" layoutY="306.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" text="Brincar" />
-      <Button layoutX="192.0" layoutY="306.0" mnemonicParsing="false" text="Alimentar" />
-      <Button layoutX="410.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Editar" />
-      <Button layoutX="516.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Excluir" />
-      <TableView layoutX="62.0" layoutY="349.0" prefHeight="200.0" prefWidth="481.0">
+      <Button fx:id="botaoAdicionar" layoutX="302.0" layoutY="256.0" mnemonicParsing="false" onAction="#adicionarOn" prefHeight="25.0" prefWidth="70.0" text="Adicionar" />
+      <Button fx:id="botaoCarinho" layoutX="60.0" layoutY="306.0" mnemonicParsing="false" onAction="#carinhoOn" text="Carinho" />
+      <Button fx:id="botaoBrincar" layoutX="127.0" layoutY="306.0" mnemonicParsing="false" onAction="#brincarOn" prefHeight="25.0" prefWidth="58.0" text="Brincar" />
+      <Button fx:id="botaoAlimentar" layoutX="192.0" layoutY="306.0" mnemonicParsing="false" onAction="#alimentarOn" text="Alimentar" />
+      <Button fx:id="botaoEditar" layoutX="410.0" layoutY="256.0" mnemonicParsing="false" onAction="#editarOn" prefHeight="25.0" prefWidth="70.0" text="Editar" />
+      <Button fx:id="botaoExcluir" layoutX="516.0" layoutY="256.0" mnemonicParsing="false" onAction="#excluirOn" prefHeight="25.0" prefWidth="70.0" text="Excluir" />
+      <TableView fx:id="tabelaAnimal" layoutX="62.0" layoutY="349.0" prefHeight="200.0" prefWidth="481.0">
         <columns>
-          <TableColumn prefWidth="160.0" text="Nome" />
-            <TableColumn prefWidth="160.0" text="Especie" />
-            <TableColumn prefWidth="160.0" text="Idade" />
+          <TableColumn fx:id="colNome" prefWidth="160.0" text="Nome" />
+            <TableColumn fx:id="colEspecie" prefWidth="160.0" text="Especie" />
+            <TableColumn fx:id="colIdade" prefWidth="160.0" text="Idade" />
         </columns>
       </TableView>
       <Button fx:id="botaoMenu" layoutX="382.0" layoutY="306.0" mnemonicParsing="false" onAction="#voltarMenu" prefHeight="25.0" prefWidth="127.0" text="Voltar para o MENU" />
