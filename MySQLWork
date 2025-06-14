@@ -15,4 +15,39 @@ id int primary key auto_increment not null,
 marca varchar(255) not null,
 modelo varchar(255) not null,
 tamanho int not null
+);
+
+create table atividadedois.carro (
+id int primary key auto_increment not null,
+nome varchar(255) not null,
+marca varchar(255) not null,
+ano int not null
+);
+
+create table atividadedois.cerveja (
+id int primary key auto_increment not null,
+origem varchar(255) not null,
+marca varchar(255) not null,
+teor int not null
+);
+
+create table atividadedois.filme (
+id int primary key auto_increment not null,
+nome varchar(255) not null,
+genero varchar(255) not null,
+ano int not null
+);
+
+create table atividadedois.instrumento (
+id int primary key auto_increment not null,
+nome varchar(255) not null,
+marca varchar(255) not null,
+tipo int not null
+);
+
+create table atividadedois.jogo (
+id int primary key auto_increment not null,
+nome varchar(255) not null,
+genero varchar(255) not null,
+ano int not null
 )
