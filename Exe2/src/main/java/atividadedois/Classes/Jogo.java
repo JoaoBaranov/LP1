@@ -5,13 +5,15 @@ public class Jogo {
         private String nome;
         private String genero;
         private int ano;
+        private int id;
 
 
 
-        public Jogo(String nome, int ano, String genero) {
+        public Jogo() {
             this.nome = nome;
             this.ano = ano;
             this.genero = genero;
+            this.id = id;
 
         }
 
@@ -28,6 +30,14 @@ public class Jogo {
         public void setAno(int ano) {
             this.ano = ano;
         }
+
+        public int getId() {
+        return id;
+    }
+
+        public void setId(int id) {
+        this.id = id;
+    }
 
         public String getGenero() {
             return genero;

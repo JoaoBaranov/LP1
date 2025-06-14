@@ -27,17 +27,17 @@
         <Label layoutX="308.0" layoutY="117.0" text="Nome" />
         <Label layoutX="308.0" layoutY="167.0" text="Marca" />
         <Label layoutX="308.0" layoutY="214.0" text="Ano" />
-        <Button layoutX="302.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Adicionar" />
+        <Button fx:id="botaoAdicionar" layoutX="302.0" layoutY="256.0" mnemonicParsing="false" onAction="#adicionarOn" prefHeight="25.0" prefWidth="70.0" text="Adicionar" />
         <Button fx:id="botaoAcelerar" layoutX="60.0" layoutY="306.0" mnemonicParsing="false" onAction="#acelerarOn" text="Acelerar" />
         <Button fx:id="botaoFrear" layoutX="139.0" layoutY="306.0" mnemonicParsing="false" onAction="#frearOn" text="Frear" />
         <Button fx:id="botaoBuzinar" layoutX="201.0" layoutY="306.0" mnemonicParsing="false" onAction="#buzinarOn" text="Buzinar" />
-        <Button layoutX="410.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Editar" />
-        <Button layoutX="516.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Excluir" />
-        <TableView layoutX="62.0" layoutY="349.0" prefHeight="200.0" prefWidth="481.0">
+        <Button fx:id="botaoEditar" layoutX="410.0" layoutY="256.0" mnemonicParsing="false" onAction="#editarOn" prefHeight="25.0" prefWidth="70.0" text="Editar" />
+        <Button fx:id="botaoExcluir" layoutX="516.0" layoutY="256.0" mnemonicParsing="false" onAction="#excluirOn" prefHeight="25.0" prefWidth="70.0" text="Excluir" />
+        <TableView fx:id="tabelaCarros" layoutX="62.0" layoutY="349.0" prefHeight="200.0" prefWidth="481.0">
             <columns>
-                <TableColumn prefWidth="160.0" text="Nome" />
-                <TableColumn prefWidth="160.0" text="Marca" />
-                <TableColumn prefWidth="160.0" text="Ano" />
+                <TableColumn fx:id="colNome" prefWidth="160.0" text="Nome" />
+                <TableColumn fx:id="colMarca" prefWidth="160.0" text="Marca" />
+                <TableColumn fx:id="colAno" prefWidth="160.0" text="Ano" />
             </columns>
         </TableView>
       <Button fx:id="botaoMenu" layoutX="382.0" layoutY="306.0" mnemonicParsing="false" onAction="#voltarMenu" prefHeight="25.0" prefWidth="127.0" text="Voltar para o MENU" />

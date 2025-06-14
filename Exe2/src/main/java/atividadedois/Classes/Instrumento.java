@@ -5,13 +5,15 @@ public class Instrumento {
     private String nome;
     private String tipo;
     private String marca;
+    private int id;
 
 
 
-    public Instrumento(String nome, String marca, String tipo) {
+    public Instrumento() {
         this.nome = nome;
         this.marca = marca;
         this.tipo = tipo;
+        this.id = id;
 
     }
 
@@ -29,6 +31,14 @@ public class Instrumento {
 
     public void setMarca(String marca) {
         this.marca = marca;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTipo() {return tipo;}

@@ -3,15 +3,17 @@ package atividadedois.Classes;
 public class Cerveja {
 
     private String origem;
-    private double teor;
+    private int teor;
     private String marca;
+    private int id;
 
 
 
-    public Cerveja(String origem, double teor, String marca) {
+    public Cerveja() {
         this.origem = origem;
         this.teor = teor;
         this.marca  = marca;
+        this.id = id;
 
     }
 
@@ -23,12 +25,20 @@ public class Cerveja {
         this.origem = origem;
     }
 
-    public double getTeor() {
+    public int getTeor() {
         return teor;
     }
 
-    public void setTeor(double teor) {
+    public void setTeor(int teor) {
         this.teor = teor;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getMarca() {

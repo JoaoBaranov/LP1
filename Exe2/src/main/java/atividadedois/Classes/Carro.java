@@ -5,14 +5,15 @@ public class Carro {
     private String nome;
     private int ano;
     private String marca;
+    private int id;
 
 
 
-    public Carro(String nome, int ano, String marca) {
+    public Carro() {
         this.nome = nome;
         this.ano = ano;
         this.marca  = marca;
-
+        this.id = id;
     }
 
     public String getNome() {
@@ -29,6 +30,14 @@ public class Carro {
 
     public void setAno(int ano) {
         this.ano = ano;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getMarca() {
