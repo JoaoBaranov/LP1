@@ -5,14 +5,15 @@ public class Roupa {
     private String tipo;
     private String cor;
     private int tamanho;
+    private int id;
 
 
 
-    public Roupa(String tipo, int tamanho, String cor) {
+    public Roupa() {
         this.tipo = tipo;
         this.tamanho = tamanho;
         this.cor = cor;
-
+        this.id = id;
     }
 
     public String getTipo() {
@@ -27,6 +28,14 @@ public class Roupa {
 
     public void setTamanho(int tamanho) {
         this.tamanho = tamanho;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getCor() {

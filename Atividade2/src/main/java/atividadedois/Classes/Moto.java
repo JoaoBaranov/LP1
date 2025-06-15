@@ -5,13 +5,15 @@ public class Moto {
     private String nome;
     private String marca;
     private int cilindrada;
+    private int id;
 
 
 
-    public Moto(String nome, int cilindrada, String marca) {
+    public Moto() {
         this.nome = nome;
         this.marca = marca;
         this.cilindrada = cilindrada;
+        this.id = id;
 
     }
 
@@ -27,6 +29,14 @@ public class Moto {
 
     public void setCilindrada(int cilindrada) {
         this.cilindrada = cilindrada;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getMarca() {

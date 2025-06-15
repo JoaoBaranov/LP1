@@ -76,6 +76,11 @@ public class CalcadoController {
         tabelaCalcados.setItems(FXCollections.observableArrayList());
 
         carregarCalcado();
+        tabelaCalcados.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if (newSelection != null) {
+                calcadoSelecionado = newSelection;
+            }
+        });
     }
 
     @FXML

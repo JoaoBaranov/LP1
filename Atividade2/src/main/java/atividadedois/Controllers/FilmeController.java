@@ -76,6 +76,12 @@ public class FilmeController {
         tabelaFilmes.setItems(FXCollections.observableArrayList());
 
         carregarFilme();
+
+        tabelaFilmes.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if (newSelection != null) {
+                filmeSelecionado = newSelection;
+            }
+        });
     }
 
     private void carregarFilme() {

@@ -77,6 +77,12 @@ public class JogoController {
         tabelaJogos.setItems(FXCollections.observableArrayList());
 
         carregarJogos();
+
+        tabelaJogos.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if (newSelection != null) {
+                jogoSelecionado = newSelection;
+            }
+        });
     }
 
     private void carregarJogos() {

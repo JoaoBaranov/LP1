@@ -71,6 +71,12 @@ public class CervejaController {
         tabelaCervejas.setItems(FXCollections.observableArrayList());
 
         carregarCerveja();
+
+        tabelaCervejas.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if (newSelection != null) {
+                cervejaSelecionado = newSelection;
+            }
+        });
     }
 
     private void carregarCerveja() {

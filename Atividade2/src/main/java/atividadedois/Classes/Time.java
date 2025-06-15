@@ -4,13 +4,15 @@ public class Time {
     private String nome;
     private String pais;
     private int titulos;
+    private int id;
 
 
 
-    public Time(String nome, int titulos, String pais) {
+    public Time() {
         this.nome = nome;
         this.pais = pais;
         this.titulos = titulos;
+        this.id = id;
 
     }
 
@@ -26,6 +28,14 @@ public class Time {
 
     public void setTitulos(int titulos) {
         this.titulos = titulos;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getPais() {

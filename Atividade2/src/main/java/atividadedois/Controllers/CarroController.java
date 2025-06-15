@@ -74,6 +74,12 @@ public class CarroController {
         tabelaCarros.setItems(FXCollections.observableArrayList());
 
         carregarCarro();
+
+        tabelaCarros.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if (newSelection != null) {
+                carroSelecionado = newSelection;
+            }
+        });
     }
 
     private void carregarCarro() {

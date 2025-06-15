@@ -70,14 +70,21 @@ public class AnimalController {
 
     @FXML
     public void initialize(){
-    colEspecie.setCellValueFactory(new PropertyValueFactory<>("especie"));
-            colIdade.setCellValueFactory(new PropertyValueFactory<>("idade"));
-            colNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
+        colEspecie.setCellValueFactory(new PropertyValueFactory<>("especie"));
+        colIdade.setCellValueFactory(new PropertyValueFactory<>("idade"));
+        colNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
 
-            tabelaAnimal.setItems(FXCollections.observableArrayList());
+        tabelaAnimal.setItems(FXCollections.observableArrayList());
 
-            carregarAnimal();
+        carregarAnimal();
+
+        tabelaAnimal.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if (newSelection != null) {
+                animalSelecionado = newSelection;
+            }
+        });
     }
+
 
     private void carregarAnimal() {
         try{
@@ -257,7 +264,7 @@ public class AnimalController {
             alertaErro.setContentText("Informe a idade do animal.");
             alertaErro.showAndWait();
         } else {
-            String mensagem = nome + " recebeu carinho, que fofura!";
+            String mensagem = nome + " brincou contigo!";
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Ação");
             alerta.setHeaderText(null);
@@ -291,7 +298,7 @@ public class AnimalController {
             alertaErro.setContentText("Informe a idade do animal.");
             alertaErro.showAndWait();
         } else {
-            String mensagem = nome + " recebeu carinho, que fofura!";
+            String mensagem = nome + " esta alimentado!";
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Ação");
             alerta.setHeaderText(null);

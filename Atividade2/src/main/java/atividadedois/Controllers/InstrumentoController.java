@@ -76,6 +76,12 @@ public class InstrumentoController {
         tabelaInstrumentos.setItems(FXCollections.observableArrayList());
 
         carregarInstrumento();
+
+        tabelaInstrumentos.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if (newSelection != null) {
+                instrumentoSelecionado = newSelection;
+            }
+        });
     }
 
     private void carregarInstrumento() {
