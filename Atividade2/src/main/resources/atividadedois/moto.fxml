@@ -21,23 +21,23 @@
          <image>
             <Image url="@../IMG/Motos.jpg" />
          </image></ImageView>
-        <TextField layoutX="353.0" layoutY="113.0" prefHeight="25.0" prefWidth="200.0" />
-        <TextField layoutX="353.0" layoutY="163.0" prefHeight="25.0" prefWidth="200.0" />
-        <TextField layoutX="353.0" layoutY="210.0" prefHeight="25.0" prefWidth="200.0" />
+        <TextField fx:id="nomeTextField" layoutX="353.0" layoutY="113.0" prefHeight="25.0" prefWidth="200.0" />
+        <TextField fx:id="marcaTextField" layoutX="353.0" layoutY="163.0" prefHeight="25.0" prefWidth="200.0" />
+        <TextField fx:id="cilTextField" layoutX="353.0" layoutY="210.0" prefHeight="25.0" prefWidth="200.0" />
         <Label layoutX="308.0" layoutY="117.0" text="Nome" />
         <Label layoutX="308.0" layoutY="167.0" text="Marca" />
         <Label layoutX="298.0" layoutY="214.0" text="Cilindrada" />
-        <Button layoutX="302.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Adicionar" />
-        <Button layoutX="60.0" layoutY="306.0" mnemonicParsing="false" text="Acelerar" />
-        <Button layoutX="131.0" layoutY="306.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" text="Frear" />
-        <Button layoutX="200.0" layoutY="306.0" mnemonicParsing="false" text="Empinar" />
-        <Button layoutX="410.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Editar" />
-        <Button layoutX="516.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Excluir" />
-        <TableView layoutX="62.0" layoutY="349.0" prefHeight="200.0" prefWidth="481.0">
+        <Button fx:id="botaoAdicionar" layoutX="302.0" layoutY="256.0" mnemonicParsing="false" onAction="#adicionarOn" prefHeight="25.0" prefWidth="70.0" text="Adicionar" />
+        <Button fx:id="botaoAcelerar" layoutX="60.0" layoutY="306.0" mnemonicParsing="false" onAction="#acelerarOn" text="Acelerar" />
+        <Button fx:id="botaoFrear" layoutX="131.0" layoutY="306.0" mnemonicParsing="false" onAction="#frearOn" prefHeight="25.0" prefWidth="58.0" text="Frear" />
+        <Button fx:id="botaoEmpinar" layoutX="200.0" layoutY="306.0" mnemonicParsing="false" onAction="#empinarOn" text="Empinar" />
+        <Button fx:id="botaoEditar" layoutX="410.0" layoutY="256.0" mnemonicParsing="false" onAction="#editarOn" prefHeight="25.0" prefWidth="70.0" text="Editar" />
+        <Button fx:id="botaoExcluir" layoutX="516.0" layoutY="256.0" mnemonicParsing="false" onAction="#excluirOn" prefHeight="25.0" prefWidth="70.0" text="Excluir" />
+        <TableView fx:id="tabelaMotos" layoutX="62.0" layoutY="349.0" prefHeight="200.0" prefWidth="481.0">
             <columns>
-                <TableColumn prefWidth="160.0" text="Nome" />
-                <TableColumn prefWidth="160.0" text="Marca" />
-                <TableColumn prefWidth="160.0" text="Cilindrada" />
+                <TableColumn fx:id="colNome" prefWidth="160.0" text="Nome" />
+                <TableColumn fx:id="colMarca" prefWidth="160.0" text="Marca" />
+                <TableColumn fx:id="colCil" prefWidth="160.0" text="Cilindrada" />
             </columns>
         </TableView>
         <Button fx:id="botaoMenu" layoutX="382.0" layoutY="306.0" mnemonicParsing="false" onAction="#voltarMenu" prefHeight="25.0" prefWidth="127.0" text="Voltar para o MENU" />

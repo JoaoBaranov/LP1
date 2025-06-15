@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="generoTextField" prefHeight="577.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="atividadedois.Controllers.JogoController">
+<AnchorPane prefHeight="577.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="atividadedois.Controllers.JogoController">
     <children>
         <Label layoutX="264.0" layoutY="33.0" text="Jogos">
             <font>
@@ -22,7 +22,7 @@
             <Image url="@../IMG/Jogos.jpg" />
          </image></ImageView>
         <TextField fx:id="nomeTextField" layoutX="353.0" layoutY="113.0" prefHeight="25.0" prefWidth="200.0" />
-        <TextField layoutX="353.0" layoutY="163.0" prefHeight="25.0" prefWidth="200.0" />
+        <TextField fx:id="generoTextField" layoutX="353.0" layoutY="163.0" prefHeight="25.0" prefWidth="200.0" />
         <TextField fx:id="lancaTextField" layoutX="353.0" layoutY="210.0" prefHeight="25.0" prefWidth="200.0" />
         <Label layoutX="308.0" layoutY="117.0" text="Nome" />
         <Label layoutX="308.0" layoutY="167.0" text="Gênero" />
