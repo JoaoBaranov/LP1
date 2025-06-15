@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="577.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="atividadedois.Controllers.CalcadoController">
+    <children>
+        <Label layoutX="249.0" layoutY="31.0" text="Calçados">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="168.0" fitWidth="200.0" layoutX="60.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../IMG/Calçados.jpg" />
+         </image></ImageView>
+        <TextField fx:id="marcaTextField" layoutX="353.0" layoutY="113.0" prefHeight="25.0" prefWidth="200.0" />
+        <TextField fx:id="modeloTextField" layoutX="353.0" layoutY="163.0" prefHeight="25.0" prefWidth="200.0" />
+        <TextField fx:id="tamanhoTextField" layoutX="353.0" layoutY="210.0" prefHeight="25.0" prefWidth="200.0" />
+        <Label layoutX="308.0" layoutY="117.0" text="Marca" />
+        <Label layoutX="308.0" layoutY="167.0" text="Modelo" />
+        <Label layoutX="300.0" layoutY="214.0" text="Tamanho" />
+        <Button fx:id="botaoAdicionar" layoutX="302.0" layoutY="256.0" mnemonicParsing="false" onAction="#adicionarOn" prefHeight="25.0" prefWidth="70.0" text="Adicionar" />
+        <Button fx:id="botaoBotar" layoutX="62.0" layoutY="306.0" mnemonicParsing="false" onAction="#botarOn" prefHeight="25.0" prefWidth="58.0" text="Botar" />
+        <Button fx:id="botaoTestar" layoutX="135.0" layoutY="306.0" mnemonicParsing="false" onAction="#testarOn" prefHeight="25.0" prefWidth="50.0" text="Testar" />
+        <Button fx:id="botaoEspelho" layoutX="202.0" layoutY="306.0" mnemonicParsing="false" onAction="#espelhoOn" text="Espelho" />
+        <Button fx:id="botaoEditar" layoutX="410.0" layoutY="256.0" mnemonicParsing="false" onAction="#editarOn" prefHeight="25.0" prefWidth="70.0" text="Editar" />
+        <Button fx:id="botaoExcluir" layoutX="516.0" layoutY="256.0" mnemonicParsing="false" onAction="#excluirOn" prefHeight="25.0" prefWidth="70.0" text="Excluir" />
+        <TableView fx:id="tabelaCalcados" layoutX="62.0" layoutY="349.0" prefHeight="200.0" prefWidth="481.0">
+            <columns>
+                <TableColumn fx:id="colMarca" prefWidth="160.0" text="Marca" />
+                <TableColumn fx:id="colModelo" prefWidth="160.0" text="Modelo" />
+                <TableColumn fx:id="colTamanho" prefWidth="160.0" text="Tamanho" />
+            </columns>
+        </TableView>
+        <Button fx:id="botaoMenu" layoutX="382.0" layoutY="306.0" mnemonicParsing="false" onAction="#voltarMenu" prefHeight="25.0" prefWidth="127.0" text="Voltar para o MENU" />
+    </children>
+</AnchorPane>
