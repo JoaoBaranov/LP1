@@ -21,23 +21,23 @@
          <image>
             <Image url="@../IMG/Roupas.jpg" />
          </image></ImageView>
-        <TextField layoutX="353.0" layoutY="113.0" prefHeight="25.0" prefWidth="200.0" />
-        <TextField layoutX="353.0" layoutY="163.0" prefHeight="25.0" prefWidth="200.0" />
-        <TextField layoutX="353.0" layoutY="210.0" prefHeight="25.0" prefWidth="200.0" />
+        <TextField fx:id="tipoTextField" layoutX="353.0" layoutY="113.0" prefHeight="25.0" prefWidth="200.0" />
+        <TextField fx:id="corTextField" layoutX="353.0" layoutY="163.0" prefHeight="25.0" prefWidth="200.0" />
+        <TextField fx:id="tamanhoTextField" layoutX="353.0" layoutY="210.0" prefHeight="25.0" prefWidth="200.0" />
         <Label layoutX="326.0" layoutY="117.0" text="Tipo" />
         <Label layoutX="328.0" layoutY="167.0" text="Cor" />
         <Label layoutX="301.0" layoutY="214.0" text="Tamanho" />
-        <Button layoutX="302.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Adicionar" />
-        <Button layoutX="60.0" layoutY="306.0" mnemonicParsing="false" text="Vestir" />
-        <Button layoutX="124.0" layoutY="306.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" text="Trocar" />
-        <Button layoutX="197.0" layoutY="306.0" mnemonicParsing="false" text="Comprar" />
-        <Button layoutX="410.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Editar" />
-        <Button layoutX="516.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Excluir" />
-        <TableView layoutX="62.0" layoutY="349.0" prefHeight="200.0" prefWidth="481.0">
+        <Button fx:id="botaoAdicionar" layoutX="302.0" layoutY="256.0" mnemonicParsing="false" onAction="#adicionarOn" prefHeight="25.0" prefWidth="70.0" text="Adicionar" />
+        <Button fx:id="botaoVestir" layoutX="60.0" layoutY="306.0" mnemonicParsing="false" onAction="#vestirOn" text="Vestir" />
+        <Button fx:id="botaoTrocar" layoutX="124.0" layoutY="306.0" mnemonicParsing="false" onAction="#trocarOn" prefHeight="25.0" prefWidth="58.0" text="Trocar" />
+        <Button fx:id="botaoComprar" layoutX="197.0" layoutY="306.0" mnemonicParsing="false" onAction="#comprarOn" text="Comprar" />
+        <Button fx:id="botaoEditar" layoutX="410.0" layoutY="256.0" mnemonicParsing="false" onAction="#editarOn" prefHeight="25.0" prefWidth="70.0" text="Editar" />
+        <Button fx:id="botaoExcluir" layoutX="516.0" layoutY="256.0" mnemonicParsing="false" onAction="#excluirOn" prefHeight="25.0" prefWidth="70.0" text="Excluir" />
+        <TableView fx:id="tabelaRoupas" layoutX="62.0" layoutY="349.0" prefHeight="200.0" prefWidth="481.0">
             <columns>
-                <TableColumn prefWidth="160.0" text="Tipo" />
-                <TableColumn prefWidth="160.0" text="Cor" />
-                <TableColumn prefWidth="160.0" text="Tamanho" />
+                <TableColumn fx:id="colTipo" prefWidth="160.0" text="Tipo" />
+                <TableColumn fx:id="colCor" prefWidth="160.0" text="Cor" />
+                <TableColumn fx:id="colTamanho" prefWidth="160.0" text="Tamanho" />
             </columns>
         </TableView>
         <Button fx:id="botaoMenu" layoutX="382.0" layoutY="306.0" mnemonicParsing="false" onAction="#voltarMenu" prefHeight="25.0" prefWidth="127.0" text="Voltar para o MENU" />
