@@ -206,26 +206,12 @@ public class FilmeController {
 
     @FXML
     private void pipocaOn(ActionEvent event) {
-        String nome = nomeTextField.getText();
-        String genero = generoTextField.getText();
-        String ano = lancaTextField.getText();
-        if (nome == null || nome.trim().isEmpty()) {
+        filmeSelecionado = tabelaFilmes.getSelectionModel().getSelectedItem();
+        if (filmeSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o nome do filme.");
-            alertaErro.showAndWait();
-        } else if(genero == null || genero.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a genero do filme.");
-            alertaErro.showAndWait();
-        } else if(ano == null || ano.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o lançamento do filme.");
+            alertaErro.setContentText("Selecione um filme.");
             alertaErro.showAndWait();
         } else {
             String mensagem = "voce pegou pipoca, nham nham.";
@@ -240,26 +226,12 @@ public class FilmeController {
 
     @FXML
     private void cocaOn(ActionEvent event) {
-        String nome = nomeTextField.getText();
-        String genero = generoTextField.getText();
-        String ano = lancaTextField.getText();
-        if (nome == null || nome.trim().isEmpty()) {
+        filmeSelecionado = tabelaFilmes.getSelectionModel().getSelectedItem();
+        if (filmeSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o nome do filme.");
-            alertaErro.showAndWait();
-        } else if(genero == null || genero.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a genero do filme.");
-            alertaErro.showAndWait();
-        } else if(ano == null || ano.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o lançamento do filme.");
+            alertaErro.setContentText("Selecione um filme.");
             alertaErro.showAndWait();
         } else {
             String mensagem = "voce comprou coquinha gelada, hummm";
@@ -274,29 +246,15 @@ public class FilmeController {
 
     @FXML
     private void assistirOn(ActionEvent event) {
-        String nome = nomeTextField.getText();
-        String genero = generoTextField.getText();
-        String ano = lancaTextField.getText();
-        if (nome == null || nome.trim().isEmpty()) {
+        filmeSelecionado = tabelaFilmes.getSelectionModel().getSelectedItem();
+        if (filmeSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o nome do filme.");
-            alertaErro.showAndWait();
-        } else if(genero == null || genero.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a genero do filme.");
-            alertaErro.showAndWait();
-        } else if(ano == null || ano.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o lançamento do filme.");
+            alertaErro.setContentText("Selecione um filme.");
             alertaErro.showAndWait();
         } else {
-            String mensagem ="voce irá assistir " + nome ;
+            String mensagem ="voce irá assistir " + filmeSelecionado.getNome();
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Ação");
             alerta.setHeaderText(null);

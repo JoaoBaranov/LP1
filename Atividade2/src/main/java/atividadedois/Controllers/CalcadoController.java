@@ -205,29 +205,16 @@ public class CalcadoController {
 
     @FXML
     private void botarOn(ActionEvent event) {
-        String marca = marcaTextField.getText();
-        String modelo = modeloTextField.getText();
-        String tamanho = tamanhoTextField.getText();
-        if (marca == null || marca.trim().isEmpty()) {
+        calcadoSelecionado = tabelaCalcados.getSelectionModel().getSelectedItem();
+
+        if (calcadoSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a marca do calçado.");
-            alertaErro.showAndWait();
-        } else if(modelo == null || modelo.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o modelo do calçado.");
-            alertaErro.showAndWait();
-        } else if(tamanho == null || tamanho.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o tamanho do calçado.");
+            alertaErro.setContentText("Selecione um calçado.");
             alertaErro.showAndWait();
         } else {
-            String mensagem = " Você colocou o(a) " + modelo;
+            String mensagem = " Você colocou o(a) "  + calcadoSelecionado.getModelo();
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Ação");
             alerta.setHeaderText(null);
@@ -239,29 +226,16 @@ public class CalcadoController {
 
     @FXML
     private void testarOn(ActionEvent event) {
-        String marca = marcaTextField.getText();
-        String modelo = modeloTextField.getText();
-        String tamanho = tamanhoTextField.getText();
-        if (marca == null || marca.trim().isEmpty()) {
+        calcadoSelecionado = tabelaCalcados.getSelectionModel().getSelectedItem();
+
+        if (calcadoSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a marca do calçado.");
-            alertaErro.showAndWait();
-        } else if(modelo == null || modelo.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o modelo do calçado.");
-            alertaErro.showAndWait();
-        } else if(tamanho == null || tamanho.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o tamanho do calçado.");
+            alertaErro.setContentText("Selecione um calçado.");
             alertaErro.showAndWait();
         } else {
-            String mensagem = " É FUGAAAA, você correu da loja com o(a) " + modelo;
+            String mensagem = " Você experimentou o(a) "  + calcadoSelecionado.getModelo();
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Ação");
             alerta.setHeaderText(null);
@@ -272,29 +246,16 @@ public class CalcadoController {
     }
     @FXML
     private void espelhoOn(ActionEvent event) {
-        String marca = marcaTextField.getText();
-        String modelo = modeloTextField.getText();
-        String tamanho = tamanhoTextField.getText();
-        if (marca == null || marca.trim().isEmpty()) {
+        calcadoSelecionado = tabelaCalcados.getSelectionModel().getSelectedItem();
+
+        if (calcadoSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a marca do calçado.");
-            alertaErro.showAndWait();
-        } else if(modelo == null || modelo.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o modelo do calçado.");
-            alertaErro.showAndWait();
-        } else if(tamanho == null || tamanho.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o tamanho do calçado.");
+            alertaErro.setContentText("Selecione um calçado.");
             alertaErro.showAndWait();
         } else {
-            String mensagem = " Você experimentou o(a) " + modelo + ", agora está na moda!";
+            String mensagem = " Você se olhou no espelho com o(a) " + calcadoSelecionado.getModelo() + ", agora está na moda!";
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Ação");
             alerta.setHeaderText(null);

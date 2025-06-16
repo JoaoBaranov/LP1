@@ -205,94 +205,55 @@ public class CarroController {
 
     @FXML
     private void acelerarOn(ActionEvent event) {
-        String nome = nomeTextField.getText();
-        String marca = marcaTextField.getText();
-        String ano = anoTextField.getText();
-        if (nome == null || nome.trim().isEmpty()) {
+        carroSelecionado = tabelaCarros.getSelectionModel().getSelectedItem();
+
+        if (carroSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o nome do carro.");
-            alertaErro.showAndWait();
-        } else if(marca == null || marca.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a marca do carro.");
-            alertaErro.showAndWait();
-        } else if(ano == null || ano.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o ano do carro.");
+            alertaErro.setContentText("Selecione um carro.");
             alertaErro.showAndWait();
         } else {
-            String mensagem = " Você acelerou o " + nome;
+            String mensagem = " Você acelerou o " + carroSelecionado.getNome();
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Ação");
             alerta.setHeaderText(null);
             alerta.setContentText(mensagem);
             alerta.showAndWait();
         }
-
+        limparCampos();
     }
 
     @FXML
     private void frearOn(ActionEvent event) {
-        String nome = nomeTextField.getText();
-        String marca = marcaTextField.getText();
-        String ano = anoTextField.getText();
-        if (nome == null || nome.trim().isEmpty()) {
+        carroSelecionado = tabelaCarros.getSelectionModel().getSelectedItem();
+
+        if (carroSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o nome do carro.");
-            alertaErro.showAndWait();
-        } else if(marca == null || marca.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a marca do carro.");
-            alertaErro.showAndWait();
-        } else if(ano == null || ano.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o ano do carro.");
+            alertaErro.setContentText("Selecione um carro.");
             alertaErro.showAndWait();
         } else {
-            String mensagem = " Você freou o " + nome;
+            String mensagem = " Você freou o " + carroSelecionado.getNome();
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Ação");
             alerta.setHeaderText(null);
             alerta.setContentText(mensagem);
             alerta.showAndWait();
         }
-
+limparCampos();
     }
 
     @FXML
     private void buzinarOn(ActionEvent event) {
-        String nome = nomeTextField.getText();
-        String marca = marcaTextField.getText();
-        String ano = anoTextField.getText();
-        if (nome == null || nome.trim().isEmpty()) {
+        carroSelecionado = tabelaCarros.getSelectionModel().getSelectedItem();
+
+        if (carroSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o nome do carro.");
-            alertaErro.showAndWait();
-        } else if(marca == null || marca.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a marca do carro.");
-            alertaErro.showAndWait();
-        } else if(ano == null || ano.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o ano do carro.");
+            alertaErro.setContentText("Selecione um carro.");
             alertaErro.showAndWait();
         } else {
             String mensagem = " Bi bi bi!!! Sai da frente tartaruga";
@@ -302,6 +263,7 @@ public class CarroController {
             alerta.setContentText(mensagem);
             alerta.showAndWait();
         }
+        limparCampos();
     }
 }
 

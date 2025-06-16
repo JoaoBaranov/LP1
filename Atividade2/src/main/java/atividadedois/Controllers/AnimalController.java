@@ -208,63 +208,38 @@ public class AnimalController {
 
     @FXML
     private void carinhoOn(ActionEvent event) {
-        String nome = nomeTextField.getText();
-        String especie = especieTextField.getText();
-        String idade = idadeTextField.getText();
-        if (nome == null || nome.trim().isEmpty()) {
+        animalSelecionado = tabelaAnimal.getSelectionModel().getSelectedItem();
+
+        if (animalSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o nome do animal.");
+            alertaErro.setContentText("Selecione um animal.");
             alertaErro.showAndWait();
-        } else if(especie == null || especie.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a especie do animal.");
-            alertaErro.showAndWait();
-        } else if(idade == null || idade.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a idade do animal.");
-            alertaErro.showAndWait();
+
         } else {
-            String mensagem = nome + " recebeu carinho, que fofura!";
+            String mensagem = animalSelecionado.getNome() + " recebeu carinho, que fofura!";
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Ação");
             alerta.setHeaderText(null);
             alerta.setContentText(mensagem);
             alerta.showAndWait();
         }
-
     }
 
     @FXML
     private void brincarOn(ActionEvent event) {
-        String nome = nomeTextField.getText();
-        String especie = especieTextField.getText();
-        String idade = idadeTextField.getText();
-        if (nome == null || nome.trim().isEmpty()) {
+        animalSelecionado = tabelaAnimal.getSelectionModel().getSelectedItem();
+
+        if (animalSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o nome do animal.");
+            alertaErro.setContentText("Selecione um animal.");
             alertaErro.showAndWait();
-        } else if(especie == null || especie.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a especie do animal.");
-            alertaErro.showAndWait();
-        } else if(idade == null || idade.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a idade do animal.");
-            alertaErro.showAndWait();
+
         } else {
-            String mensagem = nome + " brincou contigo!";
+            String mensagem = animalSelecionado.getNome() + " brincou contigo!";
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Ação");
             alerta.setHeaderText(null);
@@ -276,29 +251,17 @@ public class AnimalController {
 
     @FXML
     private void alimentarOn(ActionEvent event) {
-        String nome = nomeTextField.getText();
-        String especie = especieTextField.getText();
-        String idade = idadeTextField.getText();
-        if (nome == null || nome.trim().isEmpty()) {
+        animalSelecionado = tabelaAnimal.getSelectionModel().getSelectedItem();
+
+        if (animalSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o nome do animal.");
+            alertaErro.setContentText("Selecione um animal.");
             alertaErro.showAndWait();
-        } else if(especie == null || especie.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a especie do animal.");
-            alertaErro.showAndWait();
-        } else if(idade == null || idade.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a idade do animal.");
-            alertaErro.showAndWait();
+
         } else {
-            String mensagem = nome + " esta alimentado!";
+            String mensagem = animalSelecionado.getNome() + " esta alimentado!";
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Ação");
             alerta.setHeaderText(null);

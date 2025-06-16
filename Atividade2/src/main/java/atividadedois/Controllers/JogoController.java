@@ -206,29 +206,16 @@ public class JogoController {
 
     @FXML
     private void jogarOn(ActionEvent event) {
-        String nome = nomeTextField.getText();
-        String genero = generoTextField.getText();
-        String ano = lancaTextField.getText();
-        if (nome == null || nome.trim().isEmpty()) {
+        jogoSelecionado = tabelaJogos.getSelectionModel().getSelectedItem();
+
+        if (jogoSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o nome do jogo.");
-            alertaErro.showAndWait();
-        } else if(genero == null || genero.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a genero do jogo.");
-            alertaErro.showAndWait();
-        } else if(ano == null || ano.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a ano do jogo.");
+            alertaErro.setContentText("Selecione um jogo.");
             alertaErro.showAndWait();
         } else {
-            String mensagem ="voce jogou " + nome;
+            String mensagem ="voce jogou " + jogoSelecionado.getNome();
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Ação");
             alerta.setHeaderText(null);
@@ -240,26 +227,13 @@ public class JogoController {
 
     @FXML
     private void reclamarOn(ActionEvent event) {
-        String nome = nomeTextField.getText();
-        String genero = generoTextField.getText();
-        String ano = lancaTextField.getText();
-        if (nome == null || nome.trim().isEmpty()) {
+        jogoSelecionado = tabelaJogos.getSelectionModel().getSelectedItem();
+
+        if (jogoSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o nome do jogo.");
-            alertaErro.showAndWait();
-        } else if(genero == null || genero.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a genero do jogo.");
-            alertaErro.showAndWait();
-        } else if(ano == null || ano.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a ano do jogo.");
+            alertaErro.setContentText("Selecione um jogo.");
             alertaErro.showAndWait();
         } else {
             String mensagem = " esse jogo é &*@&$@(($@* ";
@@ -274,26 +248,13 @@ public class JogoController {
 
     @FXML
     private void pararOn(ActionEvent event) {
-        String nome = nomeTextField.getText();
-        String genero = generoTextField.getText();
-        String ano = lancaTextField.getText();
-        if (nome == null || nome.trim().isEmpty()) {
+        jogoSelecionado = tabelaJogos.getSelectionModel().getSelectedItem();
+
+        if (jogoSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o nome do jogo.");
-            alertaErro.showAndWait();
-        } else if(genero == null || genero.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a genero do jogo.");
-            alertaErro.showAndWait();
-        } else if(ano == null || ano.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a ano do jogo.");
+            alertaErro.setContentText("Selecione um jogo.");
             alertaErro.showAndWait();
         } else {
             String mensagem = "voce parou de jogar!";

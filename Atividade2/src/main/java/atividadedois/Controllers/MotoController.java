@@ -206,29 +206,16 @@ public class MotoController {
 
     @FXML
     private void acelerarOn(ActionEvent event) {
-        String nome = nomeTextField.getText();
-        String marca = marcaTextField.getText();
-        String cilindrada = cilTextField.getText();
-        if (nome == null || nome.trim().isEmpty()) {
+        motoSelecionado = tabelaMotos.getSelectionModel().getSelectedItem();
+
+        if (motoSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o nome da moto.");
-            alertaErro.showAndWait();
-        } else if(marca == null || marca.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a marca da moto.");
-            alertaErro.showAndWait();
-        } else if(cilindrada == null || cilindrada.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a cilindrada da moto.");
+            alertaErro.setContentText("Selecione uma moto.");
             alertaErro.showAndWait();
         } else {
-            String mensagem = "voce acelerou a " + nome;
+            String mensagem = "voce acelerou a " + motoSelecionado.getNome();
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Ação");
             alerta.setHeaderText(null);
@@ -240,29 +227,16 @@ public class MotoController {
 
     @FXML
     private void frearOn(ActionEvent event) {
-        String nome = nomeTextField.getText();
-        String marca = marcaTextField.getText();
-        String cilindrada = cilTextField.getText();
-        if (nome == null || nome.trim().isEmpty()) {
+        motoSelecionado = tabelaMotos.getSelectionModel().getSelectedItem();
+
+        if (motoSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o nome da moto.");
-            alertaErro.showAndWait();
-        } else if(marca == null || marca.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a marca da moto.");
-            alertaErro.showAndWait();
-        } else if(cilindrada == null || cilindrada.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a cilindrada da moto.");
+            alertaErro.setContentText("Selecione uma moto.");
             alertaErro.showAndWait();
         } else {
-            String mensagem = nome + " derrapou, mas conseguiu frear a tempo!";
+            String mensagem = motoSelecionado.getNome() + " derrapou, mas conseguiu frear a tempo!";
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Ação");
             alerta.setHeaderText(null);
@@ -274,29 +248,16 @@ public class MotoController {
 
     @FXML
     private void empinarOn(ActionEvent event) {
-        String nome = nomeTextField.getText();
-        String marca = nomeTextField.getText();
-        String cilindrada = cilTextField.getText();
-        if (nome == null || nome.trim().isEmpty()) {
+        motoSelecionado = tabelaMotos.getSelectionModel().getSelectedItem();
+
+        if (motoSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o nome da moto.");
-            alertaErro.showAndWait();
-        } else if(marca == null || marca.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a marca da moto.");
-            alertaErro.showAndWait();
-        } else if(cilindrada == null || cilindrada.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a cilindrada da moto.");
+            alertaErro.setContentText("Selecione uma moto.");
             alertaErro.showAndWait();
         } else {
-            String mensagem = "Voce chamou a " + nome + " no grau, ran dam dam";
+            String mensagem = "Voce chamou a " + motoSelecionado.getNome() + " no grau, ran dam dam";
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Ação");
             alerta.setHeaderText(null);

@@ -205,29 +205,15 @@ public class RoupaController {
 
     @FXML
     private void vestirOn(ActionEvent event) {
-        String tipo = tipoTextField.getText();
-        String cor = corTextField.getText();
-        String tamanho = tamanhoTextField.getText();
-        if (tipo == null || tipo.trim().isEmpty()) {
+        roupaSelecionado = tabelaRoupas.getSelectionModel().getSelectedItem();
+        if (roupaSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o tipo da roupa.");
-            alertaErro.showAndWait();
-        } else if(cor == null || cor.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a cor da roupa.");
-            alertaErro.showAndWait();
-        } else if(tamanho == null || tamanho.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a tamanho da roupa.");
+            alertaErro.setContentText("Selecione uma roupa.");
             alertaErro.showAndWait();
         } else {
-            String mensagem = "voce vestiu " + tipo + cor;
+            String mensagem = "voce vestiu " + roupaSelecionado.getTipo() + roupaSelecionado.getCor();
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Ação");
             alerta.setHeaderText(null);
@@ -239,26 +225,12 @@ public class RoupaController {
 
     @FXML
     private void trocarOn(ActionEvent event) {
-        String tipo = tipoTextField.getText();
-        String cor = corTextField.getText();
-        String tamanho = tamanhoTextField.getText();
-        if (tipo == null || tipo.trim().isEmpty()) {
+        roupaSelecionado = tabelaRoupas.getSelectionModel().getSelectedItem();
+        if (roupaSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o tipo da roupa.");
-            alertaErro.showAndWait();
-        } else if(cor == null || cor.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a cor da roupa.");
-            alertaErro.showAndWait();
-        } else if(tamanho == null || tamanho.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a tamanho da roupa.");
+            alertaErro.setContentText("Selecione uma roupa.");
             alertaErro.showAndWait();
         } else {
             String mensagem = "procure outro modelo do seu gosto.";
@@ -273,29 +245,15 @@ public class RoupaController {
 
     @FXML
     private void comprarOn(ActionEvent event) {
-        String tipo = tipoTextField.getText();
-        String cor = corTextField.getText();
-        String tamanho = tamanhoTextField.getText();
-        if (tipo == null || tipo.trim().isEmpty()) {
+        roupaSelecionado = tabelaRoupas.getSelectionModel().getSelectedItem();
+        if (roupaSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o tipo da roupa.");
-            alertaErro.showAndWait();
-        } else if(cor == null || cor.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a cor da roupa.");
-            alertaErro.showAndWait();
-        } else if(tamanho == null || tamanho.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a tamanho da roupa.");
+            alertaErro.setContentText("Selecione uma roupa.");
             alertaErro.showAndWait();
         } else {
-            String mensagem = tipo + cor + " foi comprada, curta sua compra!";
+            String mensagem = roupaSelecionado.getTipo() + roupaSelecionado.getCor() + " foi comprada, curta sua compra!";
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Ação");
             alerta.setHeaderText(null);

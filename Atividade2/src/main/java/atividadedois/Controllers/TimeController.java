@@ -207,29 +207,16 @@ public class TimeController {
 
     @FXML
     private void torcerOn(ActionEvent event) {
-        String nome = nomeTextField.getText();
-        String pais = paisTextField.getText();
-        String titulos = titulosTextField.getText();
-        if (nome == null || nome.trim().isEmpty()) {
+        timeSelecionado = tabelaTimes.getSelectionModel().getSelectedItem();
+
+        if (timeSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o nome do time.");
-            alertaErro.showAndWait();
-        } else if(pais == null || pais.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a pais do time.");
-            alertaErro.showAndWait();
-        } else if(titulos == null || titulos.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a titulos do time.");
+            alertaErro.setContentText("Selecione um animal.");
             alertaErro.showAndWait();
         } else {
-            String mensagem = "VAMO, VAMO MEU " + nome + " QUERIDO, SEMPRE ESTAREI CONTIGO, PARA SEMPRE VOU TE AMAR!";
+            String mensagem = "VAMO, VAMO MEU " + timeSelecionado.getNome() + " QUERIDO, SEMPRE ESTAREI CONTIGO, PARA SEMPRE VOU TE AMAR!";
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Ação");
             alerta.setHeaderText(null);
@@ -241,29 +228,16 @@ public class TimeController {
 
     @FXML
     private void comemorarOn(ActionEvent event) {
-        String nome = nomeTextField.getText();
-        String pais = paisTextField.getText();
-        String titulos = titulosTextField.getText();
-        if (nome == null || nome.trim().isEmpty()) {
+        timeSelecionado = tabelaTimes.getSelectionModel().getSelectedItem();
+
+        if (timeSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o nome do time.");
-            alertaErro.showAndWait();
-        } else if(pais == null || pais.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a especie do time.");
-            alertaErro.showAndWait();
-        } else if(titulos == null || titulos.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a idade do time.");
+            alertaErro.setContentText("Selecione um animal.");
             alertaErro.showAndWait();
         } else {
-            String mensagem ="NA BATIDA...GUUUUUUUUUUUOOOOOOOOOOOOLLLLLLLLLLLLLLLLLLL, DUUUUUUU " + nome;
+            String mensagem ="NA BATIDA...GUUUUUUUUUUUOOOOOOOOOOOOLLLLLLLLLLLLLLLLLLL, DUUUUUUU " + timeSelecionado.getNome();
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Ação");
             alerta.setHeaderText(null);
@@ -275,29 +249,16 @@ public class TimeController {
 
     @FXML
     private void reclamarOn(ActionEvent event) {
-        String nome = nomeTextField.getText();
-        String pais = paisTextField.getText();
-        String titulos = titulosTextField.getText();
-        if (nome == null || nome.trim().isEmpty()) {
+        timeSelecionado = tabelaTimes.getSelectionModel().getSelectedItem();
+
+        if (timeSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o nome do time.");
-            alertaErro.showAndWait();
-        } else if(pais == null || pais.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a pais do time.");
-            alertaErro.showAndWait();
-        } else if(titulos == null || titulos.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a titulos do time.");
+            alertaErro.setContentText("Selecione um animal.");
             alertaErro.showAndWait();
         } else {
-            String mensagem = "ta doido, odeio futebol, não sei nem porque assisto esse " + nome + " ainda...";
+            String mensagem = "ta doido, odeio futebol, não sei nem porque assisto esse " + timeSelecionado.getNome() + " ainda...";
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Ação");
             alerta.setHeaderText(null);

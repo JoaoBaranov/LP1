@@ -201,26 +201,13 @@ public class CervejaController {
 
     @FXML
     private void beberOn(ActionEvent event) {
-        String origem = origemTextField.getText();
-        String marca = marcaTextField.getText();
-        String teor = teorTextField.getText();
-        if (origem == null || origem.trim().isEmpty()) {
+        cervejaSelecionado = tabelaCervejas.getSelectionModel().getSelectedItem();
+
+        if (cervejaSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a origem da cerveja.");
-            alertaErro.showAndWait();
-        } else if(marca == null || marca.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a marca da cerveja.");
-            alertaErro.showAndWait();
-        } else if(teor == null || teor.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o teor da cerveja.");
+            alertaErro.setContentText("Selecione uma cerveja.");
             alertaErro.showAndWait();
         } else {
             String mensagem = "voce bebeu a cerveja geladinha!";
@@ -235,26 +222,12 @@ public class CervejaController {
 
     @FXML
     private void jogarOn(ActionEvent event) {
-        String origem = origemTextField.getText();
-        String marca = marcaTextField.getText();
-        String teor = teorTextField.getText();
-        if (origem == null || origem.trim().isEmpty()) {
+        cervejaSelecionado = tabelaCervejas.getSelectionModel().getSelectedItem();
+        if (cervejaSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a origem da cerveja.");
-            alertaErro.showAndWait();
-        } else if(marca == null || marca.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a marca da cerveja.");
-            alertaErro.showAndWait();
-        } else if(teor == null || teor.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o teor da cerveja.");
+            alertaErro.setContentText("Selecione uma cerveja.");
             alertaErro.showAndWait();
         } else {
             String mensagem = "que errado, jogou a brejinha fora...";
@@ -269,26 +242,12 @@ public class CervejaController {
 
     @FXML
     private void gutiOn(ActionEvent event) {
-        String origem = origemTextField.getText();
-        String marca = marcaTextField.getText();
-        String teor = teorTextField.getText();
-        if (origem == null || origem.trim().isEmpty()) {
+        cervejaSelecionado = tabelaCervejas.getSelectionModel().getSelectedItem();
+        if (cervejaSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a origem da cerveja.");
-            alertaErro.showAndWait();
-        } else if(marca == null || marca.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a marca da cerveja.");
-            alertaErro.showAndWait();
-        } else if(teor == null || teor.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o teor da cerveja.");
+            alertaErro.setContentText("Selecione uma cerveja.");
             alertaErro.showAndWait();
         } else {
             String mensagem = "eita rapaz, ta tudo bem? voce parece meio beudo.";

@@ -206,103 +206,66 @@ public class InstrumentoController {
 
     @FXML
     private void afinarOn(ActionEvent event) {
-        String nome = instrumentoTextFIeld.getText();
-        String tipo = tipoTextFIeld.getText();
-        String marca = marcaTextField.getText();
-        if (nome == null || nome.trim().isEmpty()) {
+        instrumentoSelecionado = tabelaInstrumentos.getSelectionModel().getSelectedItem();
+        if (instrumentoSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o nome do instrumento.");
-            alertaErro.showAndWait();
-        } else if(tipo == null || tipo.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a tipo do instrumento.");
-            alertaErro.showAndWait();
-        } else if(marca == null || marca.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a marca do instrumento.");
+            alertaErro.setContentText("Selecione um instrumento.");
             alertaErro.showAndWait();
         } else {
-            String mensagem = nome + " foi afinado!";
+            String mensagem = instrumentoSelecionado.getNome() + " foi afinado!";
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Ação");
             alerta.setHeaderText(null);
             alerta.setContentText(mensagem);
             alerta.showAndWait();
         }
+
 
     }
 
     @FXML
     private void limparOn(ActionEvent event) {
-        String nome = instrumentoTextFIeld.getText();
-        String tipo = tipoTextFIeld.getText();
-        String marca = marcaTextField.getText();
-        if (nome == null || nome.trim().isEmpty()) {
+        instrumentoSelecionado = tabelaInstrumentos.getSelectionModel().getSelectedItem();
+
+        if (instrumentoSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o nome do instrumento.");
-            alertaErro.showAndWait();
-        } else if(tipo == null || tipo.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a tipo do instrumento.");
-            alertaErro.showAndWait();
-        } else if(marca == null || marca.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a marca do instrumento.");
+            alertaErro.setContentText("Selecione um instrumento.");
             alertaErro.showAndWait();
         } else {
-            String mensagem = nome + " foi limpado!";
+            String mensagem = instrumentoSelecionado.getNome() + " foi limpado!";
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Ação");
             alerta.setHeaderText(null);
             alerta.setContentText(mensagem);
             alerta.showAndWait();
         }
+
 
     }
 
     @FXML
     private void tocarOn(ActionEvent event) {
-        String nome = instrumentoTextFIeld.getText();
-        String tipo = tipoTextFIeld.getText();
-        String marca = marcaTextField.getText();
-        if (nome == null || nome.trim().isEmpty()) {
+        instrumentoSelecionado = tabelaInstrumentos.getSelectionModel().getSelectedItem();
+
+        if (instrumentoSelecionado == null) {
             Alert alertaErro = new Alert(Alert.AlertType.ERROR);
             alertaErro.setTitle("Erro");
             alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe o nome do instrumento.");
-            alertaErro.showAndWait();
-        } else if(tipo == null || tipo.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a tipo do instrumento.");
-            alertaErro.showAndWait();
-        } else if(marca == null || marca.trim().isEmpty()) {
-            Alert alertaErro = new Alert(Alert.AlertType.ERROR);
-            alertaErro.setTitle("Erro");
-            alertaErro.setHeaderText(null);
-            alertaErro.setContentText("Informe a marca do instrumento.");
+            alertaErro.setContentText("Selecione um instrumento.");
             alertaErro.showAndWait();
         } else {
-            String mensagem = nome + " foi tocado, tan tan!";
+            String mensagem = instrumentoSelecionado.getNome() + " foi tocado, tan tan!";
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Ação");
             alerta.setHeaderText(null);
             alerta.setContentText(mensagem);
             alerta.showAndWait();
         }
+
 
     }
 }
