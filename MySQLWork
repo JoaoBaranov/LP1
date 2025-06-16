@@ -41,8 +41,8 @@ ano int not null
 create table atividadedois.instrumento (
 id int primary key auto_increment not null,
 nome varchar(255) not null,
-marca varchar(255) not null,
-tipo int not null
+tipo varchar(255) not null,
+marca int not null
 );
 
 create table atividadedois.jogo (
@@ -50,4 +50,37 @@ id int primary key auto_increment not null,
 nome varchar(255) not null,
 genero varchar(255) not null,
 ano int not null
-)
+);
+
+create table atividadedois.moto (
+id int primary key auto_increment not null,
+nome varchar(255) not null,
+marca varchar(255) not null,
+cilindrada int not null
+);
+
+create table atividadedois.roupa (
+id int primary key auto_increment not null,
+tipo varchar(255) not null,
+cor varchar(255) not null,
+tamanho int not null
+);
+
+create table atividadedois.time (
+id int primary key auto_increment not null,
+nome varchar(255) not null,
+pais varchar(255) not null,
+titulos int not null
+);
+
+USE atividadedois;
+SELECT * FROM animal;
+SELECT * FROM calcado;
+SELECT * FROM carro;
+SELECT * FROM cerveja;
+SELECT * FROM filme;
+SELECT * FROM instrumento;
+SELECT * FROM jogo;
+SELECT * FROM moto;
+SELECT * FROM roupa;
+SELECT * FROM time;
